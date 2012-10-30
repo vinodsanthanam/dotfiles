@@ -1,0 +1,9 @@
+#git aliases
+alias gcm="git co master"
+alias gcw="git co work"
+alias gpull="git pull"
+alias gpush="git push"
+alias gst="git st"
+alias grm="git rebase master"
+alias gmw="git merge work"
+alias gco="git co "
