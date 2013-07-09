@@ -6,4 +6,7 @@ alias gori="cd ~/office/projects/gap/ri"
 alias goloki="cd ~/office/projects/gap/loki/source/transformer"
 alias gohome="cd ~"
 alias home="cd ~"
+
 alias diff="git diff --word-diff=color"
+alias reset="git reset --hard"
+
