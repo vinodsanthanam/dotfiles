@@ -9,4 +9,6 @@ alias home="cd ~"
 
 alias diff="git diff --word-diff=color"
 alias reset="git reset --hard"
-
+alias rebase="git svn rebase"
+alias log="git log --decorate --stat --graph --pretty=format:\"%d %Cgreen%h%Creset (%ar - %Cred%an%Creset), %s%n\""
+alias loginaline="git log --pretty=format:'%Cgreen%ad%Creset %C(yellow)%h%Creset%C(yellow)%d%Creset %s %C(cyan)[%an]%Creset %Cgreen(%ar)%Creset' --date=short --graph"
