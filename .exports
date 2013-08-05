@@ -2,6 +2,7 @@ export PATH=$PATH:~/projects/asdk/android-sdk-mac_x86/platform-tools:~/projects/
 export CLASSPATH=/Applications/Sikuli-IDE.app/Contents/Resources/Java/sikuli-script.jar
 
 export JAVA_HOME=/Library/Java/Home
+export TOMCAT_HOME=/usr/local/Cellar/tomcat6/6.0.37/libexec/
 
 parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ →\ \1/'
