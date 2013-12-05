@@ -29,7 +29,5 @@ export PATH=$PATH:$DYLD_LIBRARY_PATH
 
 export PATH=$PATH:/usr/local/jruby-1.6.7.2/bin
 
-export http_proxy=http://qaproxy.gid.gap.com:8080/
-export https_proxy=http://qaproxy.gid.gap.com:8080/
-export ftp_proxy=http://qaproxy.gid.gap.com:8080/
+
 
