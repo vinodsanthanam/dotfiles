@@ -1,4 +1,5 @@
 #git aliases
+#testing prepush
 alias gcm="git co master"
 alias gcw="git co work"
 alias gpull="git pull"
