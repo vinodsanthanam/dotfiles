@@ -11,7 +11,7 @@ alias metrics="cd ~/office/projects/gap/aadmetrics"
 
 alias diff="git diff HEAD --word-diff=color"
 alias reset="git reset --hard"
-alias log="git log --decorate --stat --graph --pretty=format:\"%d %Cgreen%h%Creset (%ar - %Cred%an%Creset), %s%n\""
+alias log="git log --decorate --graph  --stat --pretty=format:'%d %C(yellow) %h%Creset %C(cyan) \" %s \" %Creset by (%C(magenta)%cn%Creset) %C(red) %cr' "
 alias loginaline="git log --pretty=format:'%Cgreen%ad%Creset %C(yellow)%h%Creset%C(yellow)%d%Creset %s %C(cyan)[%an]%Creset %Cred(%ar)%Creset' --date=short --graph"
 alias status="git status"
 alias push="git push"
