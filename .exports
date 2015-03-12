@@ -13,14 +13,6 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
 export CLICOLOR=true
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-alias rac="rake -s -T > .rake_autocomplete"
-export COMP_WORDBREAKS=${COMP_WORDBREAKS/\:/}
-_rakecomplete() {
-  COMPREPLY=($(compgen -W "`cat .rake_autocomplete | awk '{{print $2}}'`" -- ${COMP_WORDS[COMP_CWORD]}))
-  return 0
-}
-complete -o default -o nospace -F _rakecomplete rake
-
 export DYLD_LIBRARY_PATH="/Users/Thoughtworks/oraclients/instantclient_10_2"
 export SQLPATH="/Users/Thoughtworks/oraclients/instantclient_10_2"
 export TNS_ADMIN="/usr/local/oracle/network/admin"
