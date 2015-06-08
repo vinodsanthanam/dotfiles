@@ -47,10 +47,22 @@ nnoremap <Space> 
 vnoremap <Tab> >
 vnoremap <S-Tab> <
 
-" formatting different file types
-  autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
-  autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
-  autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+" formatting different file types - install js beautify from pathogen
+autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
+autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
+autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+
+" ctrl a for select all in normal mode 
+map <C-a> <esc>ggVG<CR>
+
+" Setting tabstop and autoindent to 2 spaces in vim
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+
+" move line up or down
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
 
 " format json content
 nmap fj :<C-U>call FormatJSON(v:count)<CR>
