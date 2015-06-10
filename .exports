@@ -23,3 +23,7 @@ export PATH=$PATH:/usr/local/jruby-1.6.7.2/bin
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/
 
+# put this in your .bash_profile
+if [ $ITERM_SESSION_ID ]; then
+ export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
+fi

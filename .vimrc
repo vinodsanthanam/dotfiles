@@ -61,8 +61,8 @@ set shiftwidth=2
 set softtabstop=2
 
 " move line up or down
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
+nnoremap mj :m .+1<CR>==
+nnoremap mk :m .-2<CR>==
 
 " format json content
 nmap fj :<C-U>call FormatJSON(v:count)<CR>
