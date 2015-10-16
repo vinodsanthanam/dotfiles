@@ -27,17 +27,17 @@ set number
 map <F2> :echo 'Current time is ' . strftime('%c')<CR>
  
 " The Silver Searcher
-if executable('ag')
- " Use ag over grep
-   set grepprg=ag\ --nogroup\ --nocolor
-
-     " Use ag in CtrlP for listing files. Lightning fast and respects
-     " .gitignore
-       let g:ctrlp_user_command = 'ag %s -l -g ""'
-
- "ag is fast enough that CtrlP doesn't need to cache
-   let g:ctrlp_use_caching = 0
-endif
+"if executable('ag')
+" " Use ag over grep
+"   set grepprg=ag\ --nogroup\ --nocolor
+"
+"     " Use ag in CtrlP for listing files. Lightning fast and respects
+"     " .gitignore
+"       let g:ctrlp_user_command = 'ag %s -l -g ""'
+"
+" "ag is fast enough that CtrlP doesn't need to cache
+"   let g:ctrlp_use_caching = 0
+"endif
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
@@ -56,6 +56,7 @@ autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
 map <C-a> <esc>ggVG<CR>
 
 " Setting tabstop and autoindent to 2 spaces in vim
+set autoindent
 set expandtab
 set shiftwidth=2
 set softtabstop=2
@@ -63,6 +64,10 @@ set softtabstop=2
 " move line up or down
 nnoremap mj :m .+1<CR>==
 nnoremap mk :m .-2<CR>==
+
+" copy to and from clipboard backslash is typically the leader key
+vmap <leader>y :w! /tmp/vitmp<CR>                                                                   
+nmap <leader>p :r! cat /tmp/vitmp<CR>
 
 " format json content
 nmap fj :<C-U>call FormatJSON(v:count)<CR>
@@ -79,6 +84,14 @@ function FormatJSON(...)
 				\ });\""
 	execute "%! node -e " . code 
 endfunction
+
+" Ctrl P settings
+let g:ctrlp_by_filename = 1
+let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_user_command = ['.git', 'git -c %s ls-files --exclude-standard --others --cached' ]
+let g:ctrlp_use_caching = 1
+let g:ctrlp_by_filename = "true"
+
 " *********  vim help **********
 
 " i.e iab msf Microsoft  - will convert msf to Microsoft when you type in
