@@ -64,10 +64,13 @@ set softtabstop=2
 " move line up or down
 nnoremap mj :m .+1<CR>==
 nnoremap mk :m .-2<CR>==
+" To enclose in single or double quoates
+nnoremap q" ciw""<Esc>P
+nnoremap q' ciw''<Esc>P
 
-" copy to and from clipboard backslash is typically the leader key
-vmap <leader>y :w! /tmp/vitmp<CR>                                                                   
-nmap <leader>p :r! cat /tmp/vitmp<CR>
+" copy to and from clipboard 
+vmap cy :w! /tmp/vitmp<CR>                                                                   
+nmap cp :r! cat /tmp/vitmp<CR>
 
 " format json content
 nmap fj :<C-U>call FormatJSON(v:count)<CR>
@@ -92,6 +95,7 @@ let g:ctrlp_user_command = ['.git', 'git -c %s ls-files --exclude-standard --oth
 let g:ctrlp_use_caching = 1
 let g:ctrlp_by_filename = "true"
 
+let g:nerdtree_tabs_autoclose=0
 " *********  vim help **********
 
 " i.e iab msf Microsoft  - will convert msf to Microsoft when you type in
