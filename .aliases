@@ -24,3 +24,7 @@ alias asim="~/Library/Android/sdk/tools/emulator -avd test"
 
 alias d=docker
 alias dm=docker-machine
+alias cdd="cd ~/office/software/simple_api_ui"
+
+" ipconfig for mac"
+alias ipconfig="ifconfig en0 | grep \"inet \" | cut -d\" \" -f2"
