@@ -20,6 +20,7 @@ export NLS_LANG="AMERICAN_AMERICA.UTF8"
 export PATH=$PATH:$DYLD_LIBRARY_PATH
 
 export PATH=$PATH:/usr/local/jruby-1.6.7.2/bin
+export PATH=$PATH:~/personal/istio-1.0.2/bin
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/
 
@@ -33,3 +34,5 @@ dkc(){
   docker kill "$@" 
   docker rm "$@" 
 }
+
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion

@@ -94,6 +94,7 @@ let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_user_command = ['.git', 'git -c %s ls-files --exclude-standard --others --cached' ]
 let g:ctrlp_use_caching = 1
 let g:ctrlp_by_filename = "true"
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 let g:nerdtree_tabs_autoclose=0
 " *********  vim help **********

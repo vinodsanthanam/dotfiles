@@ -28,3 +28,6 @@ alias cdd="cd ~/office/software/simple_api_ui"
 
 " ipconfig for mac"
 alias ipconfig="ifconfig en0 | grep \"inet \" | cut -d\" \" -f2"
+alias kc=kubectl
+alias mk=minikube
+alias ic=istioctl
