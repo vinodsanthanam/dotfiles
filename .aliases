@@ -31,3 +31,11 @@ alias ipconfig="ifconfig en0 | grep \"inet \" | cut -d\" \" -f2"
 alias kc=kubectl
 alias mk=minikube
 alias ic=istioctl
+alias ipods="watch -n5 kubectl get pods -n istio-system -o wide --show-labels"
+alias pods="watch -n5 kubectl get pods -o wide"
+alias services="kc get services"
+alias deps="kc get deployments -o wide"
+alias switchtominikubedocker="eval $(minikube docker-env)"
+alias s2md=switchtominikubedocker
+
+alias setprojectid=setprojectidforgcloud
